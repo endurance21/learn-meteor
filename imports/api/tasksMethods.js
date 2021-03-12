@@ -1,6 +1,7 @@
 import {Meteor} from "meteor/meteor"
 import {check } from 'meteor/check'
 import {tasksCollection } from "./task"
+import { Accounts } from 'meteor/accounts-base';
 Meteor.methods({
     'tasks.insert'(text) {
       check(text, String);
@@ -45,3 +46,5 @@ Meteor.methods({
   Meteor.publish('tasks', function publishTasks() {
     return tasksCollection.find({ userId: this.userId });
   });
+
+ 
