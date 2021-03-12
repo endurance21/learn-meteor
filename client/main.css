@@ -3,6 +3,34 @@ body {
   height: 100%;
   font-family: sans-serif;
 }
+.tasks {
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+.tasks{
+  overflow-y: auto;
+ 
+  line-height: 1em;
+}
+
+.tasks::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.tasks::-webkit-scrollbar:vertical {
+  width: 8px;
+}
+
+.tasks::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+
+.tasks::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid white; /* should match background, can't be transparent */
+  background-color: rgba(0, 0, 0, .6);
+}
+
 .button{
   /* font: bold 11px Arial; */
   text-decoration: none;

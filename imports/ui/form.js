@@ -11,11 +11,7 @@ export const TaskForm = ({user}) => {
 
     if (!text) return;
 
-    tasksCollection.insert({
-      text: text.trim(),
-      userId:user._id,
-      createdAt: new Date()
-    });
+    Meteor.call("tasks.insert",text)
 
     setText("");
   };
@@ -24,7 +20,7 @@ export const TaskForm = ({user}) => {
     <form className=" d-flex task-form shadow-sm p-3 mb-1 bg-body rounded justify-content-evenly "  onSubmit={handleSubmit}>
       <input
       className="mr-1"
-    style={{flex:"3"}}
+        style={{flex:"3"}}
         type="text"
         placeholder="Type to add new tasks"
         value={text}
