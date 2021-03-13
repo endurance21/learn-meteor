@@ -5,6 +5,7 @@
  * super blazing fast 
  * write client in REACT ,VUE ,ANGULAR 
  * Typescript optional 
+ * one step convert to android and ios mobile apps 
  
  ##  Unique Features
  * Meteor debug tools and DDAs
